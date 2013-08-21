@@ -8,13 +8,16 @@ function createElement(name,parid,ID,Klass,h,w){
     getpar.appendChild(selfname);
 }
 
-//Функция по созданию элементов
-//function createElement(nameVal){
-  //  var nameVal1 = nameVal;
-   // var name = document.createElement('nameVal1');
-    //console.log(name);
-    //var parname = document.getElementById('parid');
-    //name.id = id;
-    //name.class = Klass;
-    //parname.appendChild(name);
-//}
+var Animal = function(){};
+Animal.prototype.breath = function(){
+    console.log('дыхание');
+};
+var Dog = function(){};
+// Dog аследует свойства у Animal
+Dog.prototype = new Animal;
+Dog.prototype.wag = function(){
+    console.log('виляющий хвост');
+};
+var dog = new Dog;
+dog.wag();
+dog.breath();
