@@ -21,3 +21,4 @@ Dog.prototype.wag = function(){
 var dog = new Dog;
 dog.wag();
 dog.breath();
+//Конец вставки
